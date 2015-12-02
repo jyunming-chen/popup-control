@@ -1,0 +1,47 @@
+<!doctype html>
+<!-- http://caa1211.github.io/parentWindow/index.html -->
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+It's children
+<br>
+<button id="btn">	
+	chang parent color
+</button>
+<br>
+<button id="resetBtn">	
+	reset parent color
+</button>
+<br>
+<button id="alertBtn">	
+	someAlert
+</button>
+<br>
+<button id="closebtn">	
+ close
+</button>
+
+</body>
+
+<script>
+$("#closebtn").click(function(){
+    window.close();
+});
+
+$("#btn").click(function(){
+    window.opener.changeColor();
+});
+
+$("#resetBtn").click(function(){
+    window.opener.resetColor();
+});
+
+$("#alertBtn").click(function(){
+    window.opener.alertSomething(" haha !!");
+});
+
+
+</script>
+</html>
